@@ -12,6 +12,7 @@ module states {
         public game: createjs.Container;
         public grass: objects.Grass;
         public tryAgainButton: objects.Button;
+        public condition: string = "";
 
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -22,7 +23,15 @@ module states {
             this.grass = new objects.Grass();
             this.game.addChild(this.grass);
 
-            var gameOverLabel: objects.Label = new objects.Label("You Died", constants.SCREEN_CENTER_WIDTH, 100);
+            if (constants.SCORE < constants.WIN_SCORE) {
+                this.condition = "You Died. Try Again?";
+            }
+
+            else {
+                this.condition = "You Won. Try Again?";
+            }
+
+            var gameOverLabel: objects.Label = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100);
             gameOverLabel.font = "60px Consolas";
             gameOverLabel.regX = gameOverLabel.getMeasuredWidth() * 0.5;
             gameOverLabel.regY = gameOverLabel.getMeasuredHeight() * 0.5;
@@ -34,7 +43,7 @@ module states {
             var highScoreLabel: objects.Label = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
             this.game.addChild(highScoreLabel);
 
-            this.tryAgainButton = new objects.Button("assets/images/blueButton.jpg", constants.SCREEN_CENTER_WIDTH, 400);
+            this.tryAgainButton = new objects.Button("assets/images/tryButton.png", constants.SCREEN_CENTER_WIDTH, 400);
             this.game.addChild(this.tryAgainButton);
             this.tryAgainButton.on("click", this.tryAgainButtonClicked, this);
 
@@ -47,7 +56,7 @@ module states {
         tryAgainButtonClicked() {
             this.game.removeAllChildren();
             stage.removeChild(this.game);
-            currentState = constants.PLAY_STATE;
+            currentState = constants.MENU_STATE;
             stateChanged = true;
         }
 

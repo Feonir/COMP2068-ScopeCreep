@@ -48,6 +48,7 @@ var manifest = [
     { id: "grass", src: "assets/images/grass.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "instructionButton", src: "assets/images/instructionButton.png" },
+    { id: "tryButton", src: "assets/images/tryButton.png" },
     { id: "easyButton", src: "assets/images/easyButton.png" },
     { id: "normalButton", src: "assets/images/normalButton.png" },
     { id: "hardButton", src: "assets/images/hardButton.png" },

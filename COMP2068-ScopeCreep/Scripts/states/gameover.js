@@ -9,12 +9,19 @@ var states;
     var GameOver = (function () {
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function GameOver() {
+            this.condition = "";
             // Instantiate Game Container
             this.game = new createjs.Container();
             // Add ocean to game
             this.grass = new objects.Grass();
             this.game.addChild(this.grass);
-            var gameOverLabel = new objects.Label("You Died", constants.SCREEN_CENTER_WIDTH, 100);
+            if (constants.SCORE < constants.WIN_SCORE) {
+                this.condition = "You Died. Try Again?";
+            }
+            else {
+                this.condition = "You Won. Try Again?";
+            }
+            var gameOverLabel = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100);
             gameOverLabel.font = "60px Consolas";
             gameOverLabel.regX = gameOverLabel.getMeasuredWidth() * 0.5;
             gameOverLabel.regY = gameOverLabel.getMeasuredHeight() * 0.5;
@@ -23,7 +30,7 @@ var states;
             this.game.addChild(finalScoreLabel);
             var highScoreLabel = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
             this.game.addChild(highScoreLabel);
-            this.tryAgainButton = new objects.Button("assets/images/blueButton.jpg", constants.SCREEN_CENTER_WIDTH, 400);
+            this.tryAgainButton = new objects.Button("assets/images/tryButton.png", constants.SCREEN_CENTER_WIDTH, 400);
             this.game.addChild(this.tryAgainButton);
             this.tryAgainButton.on("click", this.tryAgainButtonClicked, this);
             stage.addChild(this.game);
@@ -32,7 +39,7 @@ var states;
         GameOver.prototype.tryAgainButtonClicked = function () {
             this.game.removeAllChildren();
             stage.removeChild(this.game);
-            currentState = constants.PLAY_STATE;
+            currentState = constants.MENU_STATE;
             stateChanged = true;
         };
         // UPDATE METHOD

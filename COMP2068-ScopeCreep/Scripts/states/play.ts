@@ -51,7 +51,7 @@ module states {
         //Score method
 
         public scored() {
-            
+            this.scoreboard.score = constants.SCORE;
         }
 
         // Calculate the distance between two points
@@ -111,19 +111,14 @@ module states {
                     //if it is remove it.
                     if (isDead == 0) {
                         this.game.removeChild(this.zombies[zombie]);
-                        this.zombies.splice(zombie);
+                        this.scored();
                     } 
                 }
             }
 
-            if (this.scoreboard.score == constants.WIN_SCORE) {
-                alert("GAME WON");
-            }
-
-
             this.scoreboard.update();
 
-            if (this.scoreboard.lives < 1) {
+            if (this.scoreboard.lives < 1 || this.scoreboard.score == constants.WIN_SCORE) {
                 createjs.Sound.stop();
                 this.game.removeAllChildren();
                 stage.removeAllChildren();

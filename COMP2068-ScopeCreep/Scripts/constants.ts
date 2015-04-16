@@ -16,6 +16,7 @@
     export var ZOM_NUM: number = 5;
     export var ZOM_SPEED: number = 1;
     export var WIN_SCORE: number = 5;
+    export var SCORE: number = 0;
     // States Constants
     export var MENU_STATE: number = 0;
     export var PLAY_STATE: number = 1;

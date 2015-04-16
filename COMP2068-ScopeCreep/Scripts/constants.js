@@ -15,6 +15,7 @@ var constants;
     constants.ZOM_NUM = 5;
     constants.ZOM_SPEED = 1;
     constants.WIN_SCORE = 5;
+    constants.SCORE = 0;
     // States Constants
     constants.MENU_STATE = 0;
     constants.PLAY_STATE = 1;

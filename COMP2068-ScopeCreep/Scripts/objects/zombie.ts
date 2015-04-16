@@ -104,9 +104,8 @@
 
         public hitOrKilledZombie() {
             //Detract health, reset zombie position on hit return to pool, play sound.
-            console.log("ZOMBIE HP IS" + this.zombieHP)
-            this.zombieHP = this.zombieHP - 2;
-            console.log("ZOMBIE HP IS" + this.zombieHP)
+            this.zombieHP = this.zombieHP - 5;            
+            constants.SCORE++;
           }
 
         public isDeadCheck(): number {
