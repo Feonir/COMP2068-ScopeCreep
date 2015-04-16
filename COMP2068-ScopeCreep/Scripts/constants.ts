@@ -2,7 +2,7 @@
     // Font Constants
     export var FONT_SIZE: string = "40px";
     export var FONT_FAMILY: string = "Consolas";
-    export var FONT_COLOUR: string = "#FFFF00";
+    export var FONT_COLOUR: string = "#FF0000";
 
     // Stage Constants
     export var SCREEN_WIDTH: number = 640;
@@ -14,7 +14,7 @@
     // Game Constants
     export var PLAYER_LIVES: number = 5;
     export var ZOM_NUM: number = 5;
-
+    export var ZOM_SPEED: number = 1;
     // States Constants
     export var MENU_STATE: number = 0;
     export var PLAY_STATE: number = 1;

@@ -59,6 +59,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\easyButton.png" />
+    <Content Include="assets\images\normalButton.png" />
+    <Content Include="assets\images\hardButton.png" />
+    <Content Include="assets\images\playButton.png" />
+    <Content Include="assets\images\instructionButton.png" />
+    <Content Include="assets\images\ZombieV1.png" />
+    <Content Include="assets\images\SoldierV1.png" />
     <Content Include="assets\images\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -68,12 +75,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\images\blueButton.png" />
     <Content Include="assets\images\grass.png" />
     <Content Include="assets\images\island.png" />
     <Content Include="assets\images\ocean.gif" />
     <Content Include="assets\images\playerDot.gif" />
-    <Content Include="assets\images\redButton.jpg" />
     <Content Include="assets\images\zombieDot.png" />
     <Content Include="css\game.css" />
     <Content Include="index.html" />
