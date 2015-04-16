@@ -23,10 +23,14 @@ var states;
                 this.game.addChild(this.zombies[zombie]);
             }
             this.scoreboard = new objects.ScoreBoard(this.game);
+            this.game.addEventListener('click', this.fireGun);
             stage.addChild(this.game);
         } // constructor end
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         //Score method
+        Play.prototype.fireGun = function () {
+            createjs.Sound.play("assets/audio/gunShot.ogg");
+        };
         Play.prototype.scored = function () {
             this.scoreboard.score = constants.SCORE;
         };
@@ -52,6 +56,7 @@ var states;
                     collider.isColliding = true;
                     switch (collider.name) {
                         case "zombie":
+                            this.scoreboard.lives--;
                             break;
                     }
                 }

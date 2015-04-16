@@ -17,9 +17,11 @@ var states;
             this.game.addChild(this.grass);
             if (constants.SCORE < constants.WIN_SCORE) {
                 this.condition = "You Died. Try Again?";
+                createjs.Sound.play("assets/audio/playerDeath.ogg");
             }
             else {
                 this.condition = "You Won. Try Again?";
+                createjs.Sound.play("assets/audio/victoryTheme.ogg");
             }
             var gameOverLabel = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100);
             gameOverLabel.font = "60px Consolas";
@@ -37,6 +39,7 @@ var states;
         } // constructor end
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         GameOver.prototype.tryAgainButtonClicked = function () {
+            constants.SCORE = 0;
             this.game.removeAllChildren();
             stage.removeChild(this.game);
             currentState = constants.MENU_STATE;

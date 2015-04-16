@@ -53,10 +53,13 @@ var manifest = [
     { id: "normalButton", src: "assets/images/normalButton.png" },
     { id: "hardButton", src: "assets/images/hardButton.png" },
     { id: "player", src: "assets/images/SoldierV1.png" },
-    { id: "zombie", src: "assets/images/ZombieV1.png" }
-    //{ id: "engine", src: "assets/audio/engine.ogg" }
-    //{ id: "yay", src: "assets/audio/yay.ogg" }
-    //{ id: "thunder", src: "assets/audio/thunder.ogg" }
+    { id: "zombie", src: "assets/images/zombie.gif" },
+    { id: "theme", src: "assets/audio/mainTheme.ogg" },
+    { id: "bang", src: "assets/audio/gunShot.ogg" },
+    { id: "zombieDead", src: "assets/audio/zombieDead.ogg" },
+    { id: "playerDeath", src: "assets/audio/playerDeath.ogg" },
+    { id: "win", src: "assets/audio/victoryTheme.ogg" }
+    
 
 ];
 

@@ -39,6 +39,7 @@ module states {
             }
 
             this.scoreboard = new objects.ScoreBoard(this.game);
+            this.game.addEventListener('click', this.fireGun);
 
 
 
@@ -49,6 +50,9 @@ module states {
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         //Score method
+        public fireGun() {
+            createjs.Sound.play("assets/audio/gunShot.ogg");
+        }
 
         public scored() {
             this.scoreboard.score = constants.SCORE;
@@ -80,7 +84,7 @@ module states {
                     collider.isColliding = true;
                     switch (collider.name) {
                         case "zombie":
-                            //this.scoreboard.lives--;
+                            this.scoreboard.lives--;
                             break;
                     }
                 }

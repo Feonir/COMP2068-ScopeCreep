@@ -65,9 +65,15 @@
     <Content Include="assets\images\hardButton.png" />
     <Content Include="assets\images\playButton.png" />
     <Content Include="assets\images\instructionButton.png" />
+    <Content Include="assets\images\zombie.gif" />
     <Content Include="assets\images\ZombieV1.png" />
     <Content Include="assets\images\SoldierV1.png" />
     <Content Include="assets\images\Thumbs.db" />
+    <Content Include="assets\audio\victoryTheme.ogg" />
+    <Content Include="assets\audio\mainTheme.ogg" />
+    <Content Include="assets\audio\gunShot.ogg" />
+    <Content Include="assets\audio\zombieDead.ogg" />
+    <Content Include="assets\audio\playerDeath.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,9 +123,7 @@
     <TypeScriptCompile Include="Scripts\typings\webrtc\MediaStream.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\webrtc\RTCPeerConnection.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\audio\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

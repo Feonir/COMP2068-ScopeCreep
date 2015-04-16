@@ -11,6 +11,9 @@ var states;
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function Menu() {
             this.instUp = false;
+            //End former song if need be Play the game song.
+            createjs.Sound.stop();
+            createjs.Sound.play("assets/audio/mainTheme.ogg");
             // Instantiate Game Container
             this.game = new createjs.Container();
             // Add ocean to game

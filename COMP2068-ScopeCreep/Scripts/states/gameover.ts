@@ -25,10 +25,12 @@ module states {
 
             if (constants.SCORE < constants.WIN_SCORE) {
                 this.condition = "You Died. Try Again?";
+                createjs.Sound.play("assets/audio/playerDeath.ogg");
             }
 
             else {
                 this.condition = "You Won. Try Again?";
+                createjs.Sound.play("assets/audio/victoryTheme.ogg");
             }
 
             var gameOverLabel: objects.Label = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100);
@@ -54,6 +56,7 @@ module states {
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         tryAgainButtonClicked() {
+            constants.SCORE = 0;
             this.game.removeAllChildren();
             stage.removeChild(this.game);
             currentState = constants.MENU_STATE;

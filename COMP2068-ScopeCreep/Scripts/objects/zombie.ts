@@ -103,9 +103,13 @@
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
 
         public hitOrKilledZombie() {
-            //Detract health, reset zombie position on hit return to pool, play sound.
+            
+            //Detract health, play sound.
             this.zombieHP = this.zombieHP - 5;            
             constants.SCORE++;
+            
+            createjs.Sound.play("assets/audio/gunShot.ogg");
+            createjs.Sound.play("assets/audio/zombieDead.ogg");            
           }
 
         public isDeadCheck(): number {
