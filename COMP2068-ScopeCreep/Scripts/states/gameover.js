@@ -23,14 +23,14 @@ var states;
                 this.condition = "You Won. Try Again?";
                 createjs.Sound.play("assets/audio/victoryTheme.ogg");
             }
-            var gameOverLabel = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100);
-            gameOverLabel.font = "60px Consolas";
+            var gameOverLabel = new objects.Label(this.condition, constants.SCREEN_CENTER_WIDTH, 100, constants.FONT_SIZE, "#52A3FA");
+            gameOverLabel.font = "50px Consolas";
             gameOverLabel.regX = gameOverLabel.getMeasuredWidth() * 0.5;
             gameOverLabel.regY = gameOverLabel.getMeasuredHeight() * 0.5;
             this.game.addChild(gameOverLabel);
-            var finalScoreLabel = new objects.Label("FINAL SCORE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200);
+            var finalScoreLabel = new objects.Label("FINAL SCORE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200, constants.FONT_SIZE, "#52A3FA");
             this.game.addChild(finalScoreLabel);
-            var highScoreLabel = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
+            var highScoreLabel = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300, constants.FONT_SIZE, "#52A3FA");
             this.game.addChild(highScoreLabel);
             this.tryAgainButton = new objects.Button("assets/images/tryButton.png", constants.SCREEN_CENTER_WIDTH, 400);
             this.game.addChild(this.tryAgainButton);

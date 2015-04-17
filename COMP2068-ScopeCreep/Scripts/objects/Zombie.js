@@ -18,6 +18,8 @@ var objects;
             // set the zombie to start at a random screen position
             this.zombiePos = Math.floor(Math.random() * 4);
             this.on("click", this.hitOrKilledZombie);
+            this.addEventListener("mouseover", this._mouseOver);
+            this.addEventListener("mouseout", this._mouseOut);
             this.initZombie();
         }
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++
@@ -142,6 +144,13 @@ var objects;
                 }
                 this._checkBounds();
             }
+        };
+        // EVENT HANDLERS
+        Zombie.prototype._mouseOut = function (event) {
+            event.currentTarget.alpha = 1.0;
+        };
+        Zombie.prototype._mouseOver = function (event) {
+            event.currentTarget.alpha = 0.75;
         };
         return Zombie;
     })(objects.GameObject);

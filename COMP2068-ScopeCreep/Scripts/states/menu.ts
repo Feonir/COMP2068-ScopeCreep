@@ -18,6 +18,8 @@ module states {
         public easyButton: objects.Button;
         public normalButton: objects.Button;
         public hardButton: objects.Button;
+        public backButton: objects.Button;
+        public instructionLabel: objects.Label;
 
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -33,7 +35,7 @@ module states {
             this.grass = new objects.Grass();
             this.game.addChild(this.grass);
 
-            var gameTitle: objects.Label = new objects.Label("Scope Creep", constants.SCREEN_CENTER_WIDTH, 100);
+            var gameTitle: objects.Label = new objects.Label("Scope Creep", constants.SCREEN_CENTER_WIDTH, 100, constants.FONT_SIZE, "#52A3FA");
             gameTitle.font = "80px Consolas";
             gameTitle.regX = gameTitle.getMeasuredWidth() * 0.5;
             gameTitle.regY = gameTitle.getMeasuredHeight() * 0.5;
@@ -54,7 +56,20 @@ module states {
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         instructionClicked() {
-            alert("Click on the creeping creeps to kill them. Stave off your final deadline...with death.")
+            this.game.removeChild(this.playButton);
+            this.game.removeChild(this.instructionButton);
+            this.instructionLabel = new objects.Label("Click on the zombies with\n\nyour mouse and fend them off!", constants.SCREEN_WIDTH * .8, constants.SCREEN_CENTER_HEIGHT, "24px", "yellow");
+            this.game.addChild(this.instructionLabel);
+            this.backButton = new objects.Button("assets/images/backButton.png", constants.SCREEN_CENTER_WIDTH, constants.SCREEN_HEIGHT * .75);
+            this.game.addChild(this.backButton);
+            this.backButton.on("click", this.backButtonClicked, this);
+        }
+
+        backButtonClicked() {
+            this.game.removeChild(this.backButton);
+            this.game.removeChild(this.instructionLabel);
+            this.game.addChild(this.playButton);
+            this.game.addChild(this.instructionButton);
         }
 
         playButtonClicked() {

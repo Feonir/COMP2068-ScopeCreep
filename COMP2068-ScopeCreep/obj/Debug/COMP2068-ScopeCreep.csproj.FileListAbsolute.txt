@@ -1,0 +1,6 @@
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\bin\COMP2068-ScopeCreep.dll.config
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\bin\COMP2068-ScopeCreep.dll
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\bin\COMP2068-ScopeCreep.pdb
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\obj\Debug\COMP2068-ScopeCreep.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\obj\Debug\COMP2068-ScopeCreep.dll
+C:\Users\Tim\Desktop\COMP2068-ScopeCreep-master\COMP2068-ScopeCreep\obj\Debug\COMP2068-ScopeCreep.pdb

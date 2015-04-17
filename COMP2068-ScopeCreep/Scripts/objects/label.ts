@@ -6,8 +6,8 @@
         public height: number;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        constructor(labelString: string, x: number, y: number) {
-            super(labelString, constants.FONT_SIZE + " " + constants.FONT_FAMILY, constants.FONT_COLOUR);
+        constructor(labelString: string, x: number, y: number, fontSize: string, color: string) {
+            super(labelString, fontSize + " " + constants.FONT_FAMILY, color);
 
             this.width = this.getMeasuredWidth();
             this.height = this.getMeasuredHeight();

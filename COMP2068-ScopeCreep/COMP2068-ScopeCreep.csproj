@@ -59,6 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\backButton.png" />
+    <Content Include="assets\images\soldier-blue.png" />
+    <Content Include="assets\images\soldier-red.png" />
+    <Content Include="assets\images\soldier-yellow.png" />
     <Content Include="assets\images\tryButton.png" />
     <Content Include="assets\images\easyButton.png" />
     <Content Include="assets\images\normalButton.png" />
@@ -74,6 +78,9 @@
     <Content Include="assets\audio\gunShot.ogg" />
     <Content Include="assets\audio\zombieDead.ogg" />
     <Content Include="assets\audio\playerDeath.ogg" />
+    <Content Include="bin\COMP2068-ScopeCreep.dll.config" />
+    <Content Include="obj\Debug\COMP2068-ScopeCreep.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -87,8 +94,13 @@
     <Content Include="assets\images\ocean.gif" />
     <Content Include="assets\images\playerDot.gif" />
     <Content Include="assets\images\zombieDot.png" />
+    <Content Include="bin\COMP2068-ScopeCreep.dll" />
+    <Content Include="bin\COMP2068-ScopeCreep.pdb" />
     <Content Include="css\game.css" />
     <Content Include="index.html" />
+    <Content Include="obj\Debug\COMP2068-ScopeCreep.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\COMP2068-ScopeCreep.dll" />
+    <Content Include="obj\Debug\COMP2068-ScopeCreep.pdb" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
     <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
@@ -97,6 +109,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +138,9 @@
     <TypeScriptCompile Include="Scripts\typings\webrtc\MediaStream.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\webrtc\RTCPeerConnection.d.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

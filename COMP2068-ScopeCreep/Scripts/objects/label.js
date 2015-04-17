@@ -10,8 +10,8 @@ var objects;
     var Label = (function (_super) {
         __extends(Label, _super);
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        function Label(labelString, x, y) {
-            _super.call(this, labelString, constants.FONT_SIZE + " " + constants.FONT_FAMILY, constants.FONT_COLOUR);
+        function Label(labelString, x, y, fontSize, color) {
+            _super.call(this, labelString, fontSize + " " + constants.FONT_FAMILY, color);
             this.width = this.getMeasuredWidth();
             this.height = this.getMeasuredHeight();
             this.regX = this.width * 0.5;

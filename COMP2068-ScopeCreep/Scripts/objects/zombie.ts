@@ -17,6 +17,9 @@
 
             this.on("click", this.hitOrKilledZombie);
 
+            this.addEventListener("mouseover", this._mouseOver);
+            this.addEventListener("mouseout", this._mouseOut);
+
             this.initZombie();
 
         }
@@ -199,6 +202,16 @@
             }
         }
 
+
+        // EVENT HANDLERS
+
+        private _mouseOut(event: createjs.MouseEvent): void {
+            event.currentTarget.alpha = 1.0;
+        }
+
+        private _mouseOver(event: createjs.MouseEvent): void {
+            event.currentTarget.alpha = 0.75;
+        }
 
 
     }
